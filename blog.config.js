@@ -4,7 +4,7 @@ const BLOG = {
   // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
   NOTION_PAGE_ID:
     process.env.NOTION_PAGE_ID ||
-    '02ab3b8678004aa69e9e415905ef32a5,en:7c1d570661754c8fbc568e00a01fd70e',
+    '1d1a8aab630980c08fd1fa0a11863a5e,en:7c1d570661754c8fbc568e00a01fd70e',
   THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: process.env.NEXT_PUBLIC_SINCE || 2021, // e.g if leave this empty, current year will be used.
@@ -65,7 +65,12 @@ const BLOG = {
     'Hi，我是一个程序员, Hi，我是一个打工人,Hi，我是一个干饭人,欢迎来到我的博客🎉',
 
   // uuid重定向至 slug
-  UUID_REDIRECT: process.env.UUID_REDIRECT || false
+  UUID_REDIRECT: process.env.UUID_REDIRECT || false,
+
+  // 鼠标点击烟花特效
+  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
+  // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
+  FIREWORKS_COLOR: ['255, 20, 97', '24, 255, 146', '90, 135, 255', '251, 243, 140'],
 }
 
 module.exports = BLOG
