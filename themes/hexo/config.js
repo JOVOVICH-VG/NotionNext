@@ -8,11 +8,6 @@ const CONFIG = {
     '欢迎来到我的博客🎉'
   ], // 首页大图标语文字
 
-  // 鼠标点击烟花特效
-  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
-  // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
-  FIREWORKS_COLOR: ['255, 20, 97', '24, 255, 146', '90, 135, 255', '251, 243, 140'],
-
   HEXO_HOME_NAV_BUTTONS: true, // 首页是否显示分类大图标按钮
   // 已知未修复bug, 在移动端开启true后会加载不出图片； 暂时建议设置为false。
   HEXO_HOME_NAV_BACKGROUND_IMG_FIXED: false, // 首页背景图滚动时是否固定，true 则滚动时图片不懂动； false则随鼠标滚动 ;
