@@ -78,7 +78,7 @@ const BLOG = {
   // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
   WIDGET_PET_LINK:
   process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
-    'https://cdn.jsdelivr.net/npm/live2d-widget-model-haruto/assets/haruto.model.json', 
+    'https://cdn.jsdelivr.net/npm/live2d-widget-model-koharu/assets/koharu.model.json', 
   // 是否开启点击宠物切换主题
   WIDGET_PET_SWITCH_THEME: false
 }
