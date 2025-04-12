@@ -12,6 +12,14 @@ const Footer = ({ siteInfo }) => {
   const since = siteConfig('SINCE')
   const copyrightDate =
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
+  
+    const calculateDays = () => {
+      const startDate = new Date(siteConfig('SITE_CREATE_TIME') || '2025-04-10')
+      const today = new Date()
+      const timeDiff = today.getTime() - startDate.getTime()
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+      return days
+    }
 
   return (
     <footer className='z-20 border p-2 rounded-lg bg:white dark:border-black dark:bg-hexo-black-gray justify-center text-center w-full text-sm relative'>
@@ -49,13 +57,16 @@ const Footer = ({ siteInfo }) => {
         <i className='fas fa-users' />{' '}
         <span className='px-1 busuanzi_value_site_uv'> </span>{' '}
       </span>
-      <div className='text-xs font-serif'>
+      {/* <div className='text-xs font-serif'>
         Powered By{' '}
         <a
           href='https://github.com/tangly1024/NotionNext'
           className='underline text-gray-500 dark:text-gray-300'>
           NotionNext {siteConfig('VERSION')}
         </a>
+      </div> */}
+      <div className='text-xs font-serif'>
+        本站已运行 {calculateDays()} 天
       </div>
       {/* SEO title */}
       <h1 className='pt-1 hidden'>{siteConfig('TITLE')}</h1>
