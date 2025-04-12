@@ -23,7 +23,7 @@ import { siteConfig } from '@/lib/config'
  */
 export default function PoweredBy(props) {
   const calculateDays = () => {
-    const startDate = new Date(siteConfig('SITE_CREATE_TIME') || '2025-04-010')
+    const startDate = new Date(siteConfig('SITE_CREATE_TIME') || '2025-04-10')
     const today = new Date()
     const timeDiff = today.getTime() - startDate.getTime()
     const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))

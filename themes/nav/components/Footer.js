@@ -7,6 +7,14 @@ const Footer = ({ siteInfo }) => {
   const since = siteConfig('SINCE')
   const copyrightDate =
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
+  
+    const calculateDays = () => {
+      const startDate = new Date(siteConfig('SITE_CREATE_TIME') || '2025-04-10')
+      const today = new Date()
+      const timeDiff = today.getTime() - startDate.getTime()
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
+      return days
+    }
 
   return (
     <footer className='z-20 pt-2 pb-5 bg:white dark:bg-hexo-black-gray justify-center text-center w-full text-xs relative'>
@@ -25,13 +33,17 @@ const Footer = ({ siteInfo }) => {
         © {`${copyrightDate}`}
       </div>
 
-      <div className='text-xs font-serif py-1'>
+      {/* <div className='text-xs font-serif py-1'>
         Powered By{' '}
         <a
           href='https://github.com/tangly1024/NotionNext'
           className='underline text-gray-500 dark:text-gray-300'>
           NotionNext {siteConfig('VERSION')}
         </a>
+      </div> */}
+
+      <div className='text-xs font-serif py-1'>
+        本站已运行 {calculateDays()} 天
       </div>
 
       {siteConfig('BEI_AN') && (
