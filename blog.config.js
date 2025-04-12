@@ -71,6 +71,15 @@ const BLOG = {
   FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
   // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
   FIREWORKS_COLOR: ['255, 20, 97', '24, 255, 146', '90, 135, 255', '251, 243, 140'],
+
+  // 开启2d宠物
+  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || false,
+  // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
+  WIDGET_PET_LINK:
+  process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
+    'https://cdn.jsdelivr.net/npm/live2d-widget-model-ni-j/assets/ni-j.model.json', 
+  // 是否开启点击宠物切换主题
+  WIDGET_PET_SWITCH_THEME: false
 }
 
 module.exports = BLOG
