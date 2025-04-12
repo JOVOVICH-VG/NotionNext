@@ -73,7 +73,7 @@ const BLOG = {
   FIREWORKS_COLOR: ['255, 20, 97', '24, 255, 146', '90, 135, 255', '251, 243, 140'],
 
   // 开启2d宠物
-  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || false,
+  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true,
   // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
   WIDGET_PET_LINK:
   process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
